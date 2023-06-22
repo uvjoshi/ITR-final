@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>Contact Us</title>
+    
+</head>
+
+<body>
+    <center>
+        <h1>Contact Us</h1>
+    </center>
+    <hr>
+    <center>
+        <a href="Home.html">Home</a>&nbsp;&nbsp;&nbsp;
+        <a href="About.html">About Us</a>&nbsp;&nbsp;&nbsp;
+        <a href="Team.html">Team</a>&nbsp;&nbsp;&nbsp;
+        <a href="Contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
+    </center>
+
+    <fieldset>
+        <legend>Registration form</legend>
+
+        <label>Full Name</label>
+        <input type="text" name="stud_name" placeholder="Enter Your Name">
+        <br><br>
+
+        <label>Contact No.</label>
+        <input type="text" name="stud_contact" placeholder="Enter Your Contact No.">
+        <br><br>
+
+        <label>Email Id</label>
+        <input type="email" name="stud_email" placeholder="Enter Your Email Id">
+        <br><br>
+
+        <label>Address</label>
+        <textarea rows="5" cols="15" name="stud_address" placeholder="Enter Your Address"></textarea>
+        <br><br>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male">Male
+        <input type="radio" name="gender" value="female">Female
+        <br><br>
+
+        <label>City</label>
+        <select name="stud_city">
+            <option>----Select City----</option>
+            <option>Dhule</option>
+            <option>Nashik</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+        </select>
+        <br><br>
+
+        <label>User Name</label>
+        <input type="text" name="stud_username" placeholder="Username should be less then 6 character">
+        <br><br>
+
+        <label>Password</label>
+        <input type="password" name="stud_password" placeholder="Password must be more then 8 character">
+        <br><br>
+
+        <label>Date of Birth</label>
+        <input type="date" name="stud_dob">
+        <br><br>
+
+        <label>Language</label>
+        <input type="checkbox" name="lang[]" value="English">English
+        <input type="checkbox" name="lang[]" value="Hindi">Hindi
+        <input type="checkbox" name="lang[]" value="Marathi">Marathi
+        <br><br>
+
+        <label>Select Photo</label>
+        <input type="file" name="stud_photo">
+        <br><br>
+
+        <input type="submit" name="btn_submit" value="Submit">
+        <input type="button" name="btn_reset" value="Resst">
+    </fieldset>
+
+</body>
+
+</html>
