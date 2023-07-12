@@ -2,7 +2,20 @@
 
 <head>
     <title>Contact Us</title>
-    
+    <link rel="stylesheet" href="jQuery-Validation-Engine-3.1.0/css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="jQuery-Validation-Engine-3.1.0/css/template.css" type="text/css"/>
+	<script src="jQuery-Validation-Engine-3.1.0/js/jquery-1.8.2.min.js" type="text/javascript">
+	</script>
+	<script src="jQuery-Validation-Engine-3.1.0/js/languages/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8">
+	</script>
+	<script src="jQuery-Validation-Engine-3.1.0/js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
+	</script>
+	<script>
+		jQuery(document).ready( function() {
+			// binds form submission and fields to the validation engine
+			jQuery("#formID").validationEngine();
+		});
+	</script>
 </head>
 
 <body>
@@ -21,11 +34,11 @@
         <legend>Registration form</legend>
 
         <label>Full Name</label>
-        <input type="text" name="stud_name" placeholder="Enter Your Name">
+        <input class="validate[required,custom[onlyLetterSp]] text-input" type="text" name="stud_name" placeholder="Enter Your Name">
         <br><br>
 
         <label>Contact No.</label>
-        <input type="text" name="stud_contact" placeholder="Enter Your Contact No.">
+        <input class="validate[required,custom[phone]] text-input" type="text" name="stud_contact" placeholder="Enter Your Contact No.">
         <br><br>
 
         <label>Email Id</label>
@@ -33,7 +46,7 @@
         <br><br>
 
         <label>Address</label>
-        <textarea rows="5" cols="15" name="stud_address" placeholder="Enter Your Address"></textarea>
+        <textarea class="validate[required] text-input" rows="5" cols="15" name="stud_address" placeholder="Enter Your Address"></textarea>
         <br><br>
 
         <label>Gender</label>
@@ -42,7 +55,7 @@
         <br><br>
 
         <label>City</label>
-        <select name="stud_city">
+        <select name="stud_city" multiple="true" class="validate[required]"> 
             <option>----Select City----</option>
             <option>Dhule</option>
             <option>Nashik</option>
@@ -64,9 +77,9 @@
         <br><br>
 
         <label>Language</label>
-        <input type="checkbox" name="lang[]" value="English">English
-        <input type="checkbox" name="lang[]" value="Hindi">Hindi
-        <input type="checkbox" name="lang[]" value="Marathi">Marathi
+        <input class="validate[minCheckbox[2]] checkbox" type="checkbox" name="lang[]" value="English">English
+        <input class="validate[minCheckbox[2]] checkbox" type="checkbox" name="lang[]" value="Hindi">Hindi
+        <input class="validate[minCheckbox[2]] checkbox" type="checkbox" name="lang[]" value="Marathi">Marathi
         <br><br>
 
         <label>Select Photo</label>
